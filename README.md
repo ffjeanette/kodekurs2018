@@ -1,2 +1,2 @@
 # kodekurs2018
-Kode her
+https://ffjeanette.github.io/kodekurs2018/
