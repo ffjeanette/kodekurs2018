@@ -14,9 +14,6 @@ a{
 a:hover{
     color: crimson;
 }
-#hele-siden{
-    width: 100%;
-}
 #toppen{
 
 }
@@ -48,19 +45,19 @@ a:hover{
     height: 500px;
     overflow:hidden;
 }
-.en-nyhet-bilde{
+.en-nyhet .bilde{
     width: 100%;
     height: 350px;
     overflow:hidden;
 }
-.en-nyhet img{
+.en-nyhet .bilde img{
     width: 100%;
     height: auto;
 }
-.en-nyhet-overskrift{
+.en-nyhet .overskrift{
 
 }
-.en-nyhet-beskrivelse{
+.en-nyhet .beskrivelse{
 
 }
 #hoyre-side{
@@ -71,6 +68,6 @@ a:hover{
 .min-profil-mini{
 
 }
-#bunnen{
+#footer{
     height: 50px;
 }
