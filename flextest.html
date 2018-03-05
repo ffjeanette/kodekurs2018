@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Kodekurs 2018</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0">
+    <style>
+        .flex-container {
+            display: flex;
+            background: #ddd;
+            margin: 0 0 40px 0;
+        }
+        .flex-row{
+            width: 100%;
+            flex-direction: row;
+        }
+        .flex-column{
+            flex-direction: column;
+            height: 500px;
+        }
+        .flex-1 {
+            background: limegreen;
+            flex: 1;
+        }
+        .flex-2 {
+            background: pink;
+            flex: 2;
+        }
+        .flex-4 {
+            background: yellow;
+            flex: 4;
+        }
+        .flex-container.margin .child {
+            margin: 40px;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        flex: This property is the shorthand for the flex-grow, flex-shrink and flex-basis properties. Among other values it
+        also can be set to auto (1 1 auto) and none (0 0 auto).
+        flex: 1; er det samme som flex-grow: 1 <br/><br/>
+        flex-grow: This property specifies the flex grow factor, which determines how much the flex item will grow relative
+        to the rest of the flex items in the flex container when positive free space is distributed.<br/>
+        flex-shrink: The flex-shrink specifies the flex shrink factor, which determines how much the flex item will shrink
+        relative to the rest of the flex items in the flex container when negative free space is distributed.<br/>
+        flex-basis: This property takes the same values as the width and height properties, and specifies the initial main
+        size of the flex item, before free space is distributed according to the flex factors.<br/>
+    </p>
+    <br/>
+    <h1>Flex-direction: row; hvor parent har width: 100%</h1>
+    <p>Her er 100% 4, så hvert element blir 25%. Siden vi ikke har noe margin får de 4 boksene faktisk 25% av bredden til parent
+        div'n.</p>
+    <div class="flex-container flex-row">
+        <div class="flex-1 child">Flex 1 - 25%</div>
+        <div class="flex-1 child">Flex 1 - 25%</div>
+        <div class="flex-1 child">Flex 1 - 25%</div>
+        <div class="flex-1 child">Flex 1 - 25%</div>
+    </div>
+    <p>Her er 100% 16. Så de med flex:2 er 12,5% og de med flex:4 er 25%. </p>
+    <div class="flex-container flex-row">
+        <div class="flex-2 child">Flex 2 - 12,5%</div>
+        <div class="flex-4 child">Flex 4 - 25%</div>
+        <div class="flex-4 child">Flex 4 - 25%</div>
+        <div class="flex-4 child">Flex 4 - 25%</div>
+        <div class="flex-2 child">Flex 2 - 12,5%</div>
+    </div>
+    <p>Her er 100% 10. Så de med flex:2 får 20% bredde og de med flex:1 får 10% bredde når margin er trukket fra.</p>
+    <div class="flex-container flex-row margin">
+        <div class="flex-2 child">Flex 2 - 20%</div>
+        <div class="flex-1 child">Flex 1 - 10%</div>
+        <div class="flex-1 child">Flex 1 - 10%</div>
+        <div class="flex-2 child">Flex 2 - 20%</div>
+        <div class="flex-2 child">Flex 2 - 20%</div>
+        <div class="flex-1 child">Flex 1 - 10%</div>
+        <div class="flex-1 child">Flex 1 - 10%</div>
+    </div>
+    <h1>Flex-direction: column; hvor parent har height: 500px;</h1>
+    <p>Her er 100% 4, så hvert element får 25%. Siden vi ikke har noe margin blir de 4 boksene faktisk 25% høyde av parent
+        div'n.</p>
+    <div class="flex-container flex-column">
+        <div class="flex-1 child">Flex 1 - 25%</div>
+        <div class="flex-1 child">Flex 1 - 25%</div>
+        <div class="flex-1 child">Flex 1 - 25%</div>
+        <div class="flex-1 child">Flex 1 - 25%</div>
+    </div>
+    <p>Her er 100% 10. Så de med flex:2 får 20% høyde og de med flex:1 får 10% høyde når margin er trekt fra.</p>
+    <div class="flex-container flex-column">
+        <div class="flex-2 child">Flex 2 - 20%</div>
+        <div class="flex-1 child">Flex 1 - 10%</div>
+        <div class="flex-1 child">Flex 1 - 10%</div>
+        <div class="flex-2 child">Flex 2 - 20%</div>
+        <div class="flex-2 child">Flex 2 - 20%</div>
+        <div class="flex-1 child">Flex 1 - 10%</div>
+        <div class="flex-1 child">Flex 1 - 10%</div>
+    </div>
+</body>
+</html>
