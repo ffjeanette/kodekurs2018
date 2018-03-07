@@ -1,14 +1,13 @@
 body{
-    background: ghostwhite;
-    font-family: "Arial";
-    margin: 0px;
-
+    background: whitesmoke; /**Setter bakgrunnsfarge på teksten**/
+    font-family: "Arial"; /**Forteller hvilken fonttype vi skal bruke**/
+    margin: 0;
 }
 p{
-    color: black;
+    color: black; /**Setter fargen på teksten inne i denne div'en**/
 }
 h1, h2, h3{
-    color: black;
+    color: white;
 }
 
 a{
@@ -24,20 +23,28 @@ div {
 
 /** HEADER og MENY **/
 #header{
+    padding: 20px; /** Luft inni boksen**/
     text-align: center; /** Midtstiller teksten **/
     width: 100%; /** Diven skal bruke 100% (hele) bredden**/
+    float: left;
+    background: cadetblue;
+}
+#side-tittel{
+    font-size: 60px;
+    margin: 0;
 }
 #hovedmeny{
+    color: white;
     display: flex; /** Layouten skal være flex. **/
     justify-content: center; /** Setter innholdet i div'en i midten horisontalt (bortover)**/
     align-content: center; /** Setter innholdet i div'en i midten vertikalt (oppover) **/
 }
 
 #hovedmeny ul {
-    margin: 10px 0; /** Luft rundt boksen skal være 10px over og under med ingenting på sidene**/
     padding: 0; /** Luft inne i boksen**/
     display: flex;  /** Layouten skal være flex. **/
     flex-direction: row; /** Div'ene inne i denne div'en skal plasseres bortover**/
+    background: white;
 }
 
 #hovedmeny ul li {
@@ -45,8 +52,9 @@ div {
 }
 
 #hovedmeny ul li a{
-    padding: 10px;
+    padding: 20px;
     border: 1px solid grey;
+    text-decoration: none;
 }
 
 #hovedmeny ul li a:hover {
@@ -61,7 +69,6 @@ div {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    background-color: steelblue;
 }
 
 /** VENSTRE SIDE AV INNHOLDET **/
@@ -72,13 +79,11 @@ div {
     padding: 10px;
 }
 .seksjon h2{
-    color: white;
+    color: cadetblue;
+    font-size: 40px;
 }
 .seksjon.blaa{
     background: cadetblue;
-}
-.seksjon.oransj{
-    background: darkorange;
 }
 
 .innholdsblokk{
@@ -97,7 +102,7 @@ div {
     width: 100%;
     height: 350px;
     flex: 3;
-    overflow: hidden;
+    overflow: hidden; /**Hvis noe tar større plass en div'en (feks et bilde) skjuler vi det som går utenfor**/
 }
 .en-nyhet .bilde img{
     width: 100%;
@@ -107,9 +112,15 @@ div {
     flex: 1;
     background: #FFF;
     color: #777;
+    padding: 20px;
 }
+.en-nyhet .beskrivelse h3{
+    margin: 0;
+}
+
 .en-nyhet .overskrift{
     color: #444;
+    font-size: 32px;
 }
 .en-nyhet iframe{
     max-width: 100%;
@@ -119,6 +130,10 @@ div {
     flex: 1;
     padding: 20px;
     border-left: 1px dashed ghostwhite;
+    background-color: steelblue;
+}
+#hoyre-side p{
+    color: white;
 }
 .min-profil-mini{
     text-align: center;
@@ -131,4 +146,7 @@ div {
     display: flex;
     justify-content: center; /** Setter innholdet i div'en i midten horisontalt (bortover)**/
     align-content: center; /** Setter innholdet i div'en i midten vertikalt (oppover) **/
+    background: cadetblue;
+    border-top: 5px solid steelblue;
 }
+#footer p{color: white;}
